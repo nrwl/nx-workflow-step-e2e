@@ -1,0 +1,7 @@
+name: "Simple Node step"
+description: "A simple Node step"
+
+definition:
+  using: 'node'
+  main: node-main.js
+  post: node-post.js

@@ -1,0 +1,12 @@
+name: "Simple Node step"
+description: "A simple aggregate to test"
+
+definition:
+  using: 'aggregated'
+  steps:
+    - name: 'First step'
+      script: "echo 'First step of our aggregate template'"
+    - name: 'Reference Node step from aggregate'
+      uses: "nrwl/nx-workflow-step-e2e/main/simple-node-step.yaml"
+    - name: 'Intermediate step'
+      script: "echo 'This step should fire before the final post step from the Node definition above'"
